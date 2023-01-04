@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Start : MonoBehaviour
 {
-   public void ModeButton()
+
+    public void ModeButton()
     {
+        InitStat.weight = Random.Range(100,200);
+        print(InitStat.weight);
+
+
         SceneManager.LoadScene("GamePlay");
     }
+
+    
 }
