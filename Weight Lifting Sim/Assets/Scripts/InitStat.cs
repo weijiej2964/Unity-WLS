@@ -6,4 +6,6 @@ public class InitStat : MonoBehaviour
 {
     public static int weight;
 
+    public static int determination;
+
 }

@@ -9,6 +9,10 @@ public class CloseJournal : MonoBehaviour
     public GameObject CloseButton;
     public GameObject OpenButton;
 
+    public GameObject BulkOn;
+
+    public GameObject BulkOff;
+
     [SerializeField] private Image Background;
     [SerializeField] private Color BackgroundColor;
 
@@ -21,6 +25,8 @@ public class CloseJournal : MonoBehaviour
         Journal.SetActive(false);
         CloseButton.SetActive(false);
         OpenButton.SetActive(true);
+        BulkOn.SetActive(true);
+        BulkOff.SetActive(true);
         Background.color = BackgroundColor;
     }
 }
