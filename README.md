@@ -10,6 +10,12 @@
 * tip: create a class for both player exercise and diet
 
 ### Decide stat
+* Weight 
+* Determination 
+* Body fat > low. Mid. High > in numbers
+* muscle mass > low . mid. high > in numbers
+* 
+
 
 ### create a switch for bulk and cut
 * increase weight for cutting phase, loses determination
