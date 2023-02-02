@@ -14,10 +14,10 @@
 * Determination 
 * Body fat > low. Mid. High > in numbers
 * muscle mass > low . mid. high > in numbers
-* 
+* Metabolism 
 
 
-### create a switch for bulk and cut
+### create a switch for bulk and cut (done)
 * increase weight for cutting phase, loses determination
 * increase weight for bulking, increase determination
 * vise versa
