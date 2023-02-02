@@ -9,6 +9,9 @@
 * when clicked on an box, it removes the current option
 * tip: create a class for both player exercise and diet
 
+* Chicken + rice + brocolii > decrease determination, Low calories 
+* 
+
 ### Decide stat
 * Weight 
 * Determination 
