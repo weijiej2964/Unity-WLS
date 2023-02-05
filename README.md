@@ -9,9 +9,18 @@
 * when clicked on an box, it removes the current option
 * tip: create a class for both player exercise and diet
 
-### Decide stat
+* Chicken + rice + brocolii > decrease determination, Low calories 
+* 
 
-### create a switch for bulk and cut
+### Decide stat
+* Weight 
+* Determination 
+* Body fat > low. Mid. High > in numbers
+* muscle mass > low . mid. high > in numbers
+* Metabolism 
+
+
+### create a switch for bulk and cut (done)
 * increase weight for cutting phase, loses determination
 * increase weight for bulking, increase determination
 * vise versa
