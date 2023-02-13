@@ -14,10 +14,10 @@
 
 ### Decide stat
 * Weight 
-* Determination 
+* Determination (100 - determination = % of something bad happening) 
 * Body fat > low. Mid. High > in numbers
 * muscle mass > low . mid. high > in numbers
-* Metabolism 
+* Metabolism (number of calories burned without any exercise)
 
 
 ### create a switch for bulk and cut (done)
