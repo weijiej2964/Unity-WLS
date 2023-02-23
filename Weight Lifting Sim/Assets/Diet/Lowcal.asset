@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8343ce5c6ad91bf45883fff768ae6023, type: 3}
-  m_Name: Cardio
+  m_Script: {fileID: 11500000, guid: 6d240f2b9a74d1d4cb0323fd2b4b8262, type: 3}
+  m_Name: Lowcal
   m_EditorClassIdentifier: 
-  id: 1
-  ExerciseName: Cardio
-  value: 100
-  icon: {fileID: 21300000, guid: 87dba32b2e851d94e841150deaa13d57, type: 3}
+  id: 5
+  DietName: LowCal
+  value: 500
+  icon: {fileID: 21300000, guid: 57ef25e020036484c9ff6cc458ef38e1, type: 3}
