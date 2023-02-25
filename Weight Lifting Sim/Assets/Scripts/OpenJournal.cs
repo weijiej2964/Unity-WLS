@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class OpenJournal : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class OpenJournal : MonoBehaviour
     public GameObject BulkOn;
 
     public GameObject BulkOff;
+
+    public GameObject nextButton;
+
+    public GameObject dayText;
+
+
 
 
     [SerializeField] private Image Background;
@@ -32,6 +39,8 @@ public class OpenJournal : MonoBehaviour
         BulkOn.SetActive(false);
         BulkOff.SetActive(false);
         Background.color = BackgroundColor; 
+        nextButton.SetActive(false);
+        dayText.SetActive(false);
     }
    
 }

@@ -8,4 +8,6 @@ public class InitStat : MonoBehaviour
 
     public static int determination;
 
+    public static int day;
+
 }

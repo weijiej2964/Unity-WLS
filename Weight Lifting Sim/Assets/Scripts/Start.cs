@@ -14,6 +14,8 @@ public class Start : MonoBehaviour
         InitStat.determination = Random.Range(0, 100);
         print(InitStat.determination);
 
+        InitStat.day = 1;
+
         SceneManager.LoadScene("GamePlay");
     }
 

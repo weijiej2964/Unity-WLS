@@ -13,6 +13,10 @@ public class CloseJournal : MonoBehaviour
 
     public GameObject BulkOff;
 
+    public GameObject nextButton;
+
+    public GameObject dayText;
+
     [SerializeField] private Image Background;
     [SerializeField] private Color BackgroundColor;
 
@@ -28,5 +32,7 @@ public class CloseJournal : MonoBehaviour
         BulkOn.SetActive(true);
         BulkOff.SetActive(true);
         Background.color = BackgroundColor;
+        nextButton.SetActive(true);
+        dayText.SetActive(true);
     }
 }
