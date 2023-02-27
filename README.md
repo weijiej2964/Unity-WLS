@@ -21,11 +21,11 @@
 * Intense Weight Lifting - Decrease Body Fat, Heavily Increase Muscle Mass, Decrease Determination
 
 ### Decide stat
-* Weight 
-* Determination (100 - determination = % of something bad happening) 
-* Body fat > low. Mid. High > in numbers
-* muscle mass > low . mid. high > in numbers
-* Metabolism (number of calories burned without any exercise)
+* Weight - 100 lb to 300 lb
+* Determination (100 - determination = % of something bad happening) - 50 to 100
+* Body fat > low. Mid. High > in numbers - Low (2% - 8%), Moderate (8% - 19%), High (19% +)
+* muscle mass > low . mid. high > in numbers - Low (<33), Moderate (33 - 39), High (39+)
+* Metabolism (number of calories burned without any exercise) - Low (800 - 1200), Moderate (1200 - 1800), High (1800+) | If don't eat metabolism go down
 
 
 ### create a switch for bulk and cut (done)
