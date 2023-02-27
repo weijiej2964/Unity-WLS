@@ -9,9 +9,16 @@
 * when clicked on an box, it removes the current option
 * tip: create a class for both player exercise and diet
 
+#### Diet
 * Chicken + rice + brocolii > decrease determination, Low calories 
 * Big Mac Meal < Increase determination && < increase happy mood, High Calories
 * Salmon with rice > 
+
+#### Exercise
+
+* Cardio - Heavily Decrease Body Fat, Decrease Muscle Mass
+* Moderate Weight Lifting - Decrease Body Fat, Increase Muscle Mass
+* Intense Weight Lifting - Decrease Body Fat, Heavily Increase Muscle Mass, Decrease Determination
 
 ### Decide stat
 * Weight 
