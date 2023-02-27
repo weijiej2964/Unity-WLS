@@ -10,7 +10,7 @@
 * tip: create a class for both player exercise and diet
 
 #### Diet 
-* Chicken + rice + brocolii > decrease determination, Low calories 
+* Chicken + rice + broccoli > decrease determination, Low calories 
 * Big Mac Meal < Increase determination && < increase happy mood, High Calories
 * Salmon with rice > Moderate Calories, Stays the same
 
