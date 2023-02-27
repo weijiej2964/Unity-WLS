@@ -7,7 +7,8 @@ public class Exercise : ScriptableObject
 {
     public int id;
     public string ExerciseName;
-    public int value;
+    public int CaloriesBurned;
+    public float MuscleMassIncrease;
     public Sprite icon; 
 
 

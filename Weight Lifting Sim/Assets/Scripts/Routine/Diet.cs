@@ -7,7 +7,7 @@ public class Diet : ScriptableObject
 {
     public int id;
     public string DietName;
-    public int value;
+    public int Calories;
     public Sprite icon;
 
 

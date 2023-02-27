@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8343ce5c6ad91bf45883fff768ae6023, type: 3}
-  m_Name: HIIT
+  m_Script: {fileID: 11500000, guid: 6d240f2b9a74d1d4cb0323fd2b4b8262, type: 3}
+  m_Name: HighCal
   m_EditorClassIdentifier: 
   id: 3
-  ExerciseName: HIIT
-  value: 200
-  icon: {fileID: 21300000, guid: 343dddfcc1aa95647b71520458df10b7, type: 3}
+  DietName: HighCal
+  Calories: 1000
+  icon: {fileID: 21300000, guid: 559553127497738488c30e7bf8ea8ee8, type: 3}
