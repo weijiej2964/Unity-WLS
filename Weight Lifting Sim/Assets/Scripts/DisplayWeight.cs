@@ -8,6 +8,6 @@ public class DisplayWeight : MonoBehaviour
 {
     public TextMeshProUGUI weightText;
     void Start(){
-        weightText.text = "Weight = " + InitStat.weight; 
+        weightText.text = "Weight = " + InitStat.weight + " lbs"; 
     }
 }

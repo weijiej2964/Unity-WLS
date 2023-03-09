@@ -16,6 +16,13 @@ public class Start : MonoBehaviour
 
         InitStat.day = 1;
 
+        InitStat.bodyFat = Random.Range(2, 26);
+
+        InitStat.muscleMass = Random.Range(1, 45);
+
+        InitStat.metabolism = Random.Range(800, 3000);
+
+
         SceneManager.LoadScene("GamePlay");
     }
 

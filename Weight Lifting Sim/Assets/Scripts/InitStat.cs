@@ -10,4 +10,11 @@ public class InitStat : MonoBehaviour
 
     public static int day;
 
+    public static int bodyFat;
+
+    public static int muscleMass;
+
+    public static int metabolism;
+
+
 }
