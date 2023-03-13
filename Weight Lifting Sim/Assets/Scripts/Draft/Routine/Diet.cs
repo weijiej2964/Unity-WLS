@@ -10,5 +10,10 @@ public class Diet : ScriptableObject
     public int Calories;
     public Sprite icon;
 
+    public int getCal()
+    {
+        return Calories;
+    }
+
 
 }
