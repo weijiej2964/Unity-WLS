@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class turnBulkOn : MonoBehaviour
 {
-
     public GameObject bulkOn;
-
     public GameObject bulkOff;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +17,5 @@ public class turnBulkOn : MonoBehaviour
     public void buttonClick (){
         bulkOn.SetActive(true);
         bulkOff.SetActive(false);
-        InitStat.determination = (int)(InitStat.determination * 1.1);
     }
 }

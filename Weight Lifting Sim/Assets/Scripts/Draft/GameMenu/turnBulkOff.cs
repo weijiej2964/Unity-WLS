@@ -23,6 +23,5 @@ public class turnBulkOff : MonoBehaviour
     public void buttonClick(){
         bulkOff.SetActive(true);
         bulkOn.SetActive(false);
-        InitStat.determination = (int)(InitStat.determination * 0.9);
     }
 }
