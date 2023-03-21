@@ -44,4 +44,16 @@ public class Player
     {
         return metabolism;
     }
+
+    public double getMuscleMass(){
+        return muscleMass;
+    }
+
+    public double getBodyFat(){
+        return bodyFat;
+    }
+
+    public int getDetermination(){
+        return determination;
+    }
 }
