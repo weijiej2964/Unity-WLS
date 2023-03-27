@@ -122,7 +122,7 @@ public class TransitionThing : MonoBehaviour
             dailyDeterminationChange -= Mathf.Abs(extraCal) / 100;
         }
      
-        dailyWeightGrowth = dailyFatGrowth*10 + dailyMuscleGrowth*5 ;
+        dailyWeightGrowth = dailyFatGrowth + dailyMuscleGrowth ;
 
         print(dailyMuscleGrowth + " " + dailyWeightGrowth + " " + dailyFatGrowth + " " + dailyDeterminationChange + " " + dailyMetabolismChange);
         player.setValues(dailyMuscleGrowth, dailyMuscleGrowth, dailyFatGrowth, dailyDeterminationChange, dailyMetabolismChange);
