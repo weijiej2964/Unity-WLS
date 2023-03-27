@@ -14,8 +14,8 @@ public class Player
     {
         name = "Bob";
         weight = w;
-        muscleMass = mass;
-        bodyFat = b;
+        muscleMass = mass * w;
+        bodyFat = b * w;
         determination = d;
         metabolism = m;
        
