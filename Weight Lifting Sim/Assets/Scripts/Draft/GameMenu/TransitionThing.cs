@@ -10,6 +10,7 @@ public class TransitionThing : MonoBehaviour
     public TextMeshProUGUI dayNum;
     int counter;
 
+    moodChanger mood;
     Player player;
     List<Diet> diets;
     List<Exercise> exercises;
@@ -24,6 +25,7 @@ public class TransitionThing : MonoBehaviour
     private void Start()
     {
         player = InitStat.getPlayer();
+        mood = InitStat.getMood();
         diets = DietManager.Diets;
         exercises = PlanManager.Exercises;
         counter = 1;
@@ -120,6 +122,11 @@ public class TransitionThing : MonoBehaviour
             dailyMuscleGrowth += (extraCal * .9) / 2500;
             dailyFatGrowth += (extraCal * .1) / 1200;
             dailyDeterminationChange -= Mathf.Abs(extraCal) / 100;
+
+
+            // change mood
+            mood.changeMood();
+          
         }
      
         dailyWeightGrowth = dailyFatGrowth + dailyMuscleGrowth ;

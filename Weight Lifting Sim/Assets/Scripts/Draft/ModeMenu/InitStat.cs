@@ -7,14 +7,21 @@ public class InitStat : MonoBehaviour
 {
     private static Player player;
 
+    private static moodChanger mood;
+
     public void NormalMode()
     {
         player = new Player(Random.Range(100f, 300f), Random.Range(.33f, .39f), Random.Range(.8f, .19f), Random.Range(50, 100), Random.Range(1200, 1800));
         SceneManager.LoadScene("GamePlay");
+        mood = new moodChanger();
     }
 
     public static Player getPlayer()
     {
         return player;
+    }
+
+    public static moodChanger getMood(){
+        return mood;
     }
 }

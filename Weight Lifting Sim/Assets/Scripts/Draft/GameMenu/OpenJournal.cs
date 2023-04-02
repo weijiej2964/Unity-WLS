@@ -11,9 +11,12 @@ public class OpenJournal : MonoBehaviour
     public TextMeshProUGUI statText;
     Player player;
 
+    moodChanger mood;
+
     private void Start()
     {
         player = InitStat.getPlayer();
+        mood = InitStat.getMood();
         BackgroundColor.a = 1; 
     }
   
@@ -22,7 +25,7 @@ public class OpenJournal : MonoBehaviour
     {
         Background.color = BackgroundColor; 
         statText.text = "Name : " + player.getName() + " \nWeight: " + player.getWeight() + " \nDetermination: " + player.getDetermination() + " \nBody Fat: " + player.getBodyFat() + 
-        " \nMuscle Mass: " + player.getMuscleMass() + " \nMetabolism: " + player.getMetabolism();
+        " \nMuscle Mass: " + player.getMuscleMass() + " \nMetabolism: " + player.getMetabolism() + " \nMood: " + mood.getMood();
 
     }
    

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player 
 {
-    string name;
+    public string name;
 
-    double weight, muscleMass, bodyFat;
+    public double weight, muscleMass, bodyFat;
         
-    int metabolism , determination;
+    public int metabolism , determination;
 
     public Player(double w, double mass, double b, int d, int m)
     {
