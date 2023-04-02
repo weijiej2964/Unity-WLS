@@ -50,53 +50,83 @@ public class TransitionThing : MonoBehaviour
         }
 
         extraCal -= player.getMetabolism();
-        print(extraCal);
+        //change metabolism
+        dailyMetabolismChange = extraCal / 100; 
+        
+        //change fat & muscle
         if(extraCal >= 0)
         {
-            dailyMetabolismChange += 1;
-            dailyDeterminationChange += 1;
+            if(muscleGrowthIndex > 0 && extraCal > 500)
+            {
+                dailyMuscleGrowth = (500 * .75) / 2500;
+                dailyFatGrowth = (500 * .25) / 1200;
+                extraCal -= 500;
+                dailyDeterminationChange = 5;
+            }
+            else if(muscleGrowthIndex <= 0 && extraCal > 500)
+            {
+                dailyMuscleGrowth = (500 * .2) / 2500;
+                dailyFatGrowth = (500 * .8) / 1200;
+                extraCal -= 500;
+                dailyDeterminationChange = 5;
+            }
+            else if(muscleGrowthIndex > 0 && extraCal <= 500)
+            {
+                dailyMuscleGrowth = (extraCal * .75) / 2500;
+                dailyFatGrowth = (extraCal * .25) / 1200;
+                extraCal = 0;
+                dailyDeterminationChange = extraCal/100;
+            }
+            else if(muscleGrowthIndex < 0 && extraCal <= 500)
+            {
+                dailyMuscleGrowth = (extraCal * .2) / 2500;
+                dailyFatGrowth = (extraCal * .8) / 1200;
+                extraCal = 0;
+                dailyDeterminationChange = extraCal/100;
+            }
+            dailyMuscleGrowth += (extraCal * .1) / 2500;
+            dailyFatGrowth += (extraCal * .9) / 1200;
+            dailyDeterminationChange -= extraCal / 100; 
         }else if(extraCal < 0)
         {
-            dailyMetabolismChange -= 1;
-            dailyDeterminationChange -= 1;
-        }
-
-        //gain muscle
-        if(muscleGrowthIndex > 0)
-        {
-            print(((extraCal % 500) * .75f));
-            dailyMuscleGrowth = ((extraCal % 500) * .75)/3750;
-            dailyFatGrowth = ((extraCal % 500) * .25)/3750;
-            if(extraCal >= 500)
+            if (muscleGrowthIndex > 0 && extraCal < -500)
             {
-                extraCal -= 500;
+                dailyMuscleGrowth = (-500 * .25) / 2500;
+                dailyFatGrowth = (-500 * .75) / 1200;
+                extraCal += 500;
+                dailyDeterminationChange = 5;
             }
-            else
+            else if (muscleGrowthIndex <= 0 && extraCal < -500)
             {
+                dailyMuscleGrowth = (-500 * .8) / 2500;
+                dailyFatGrowth = (-500 * .2) / 1200;
+                extraCal += 500;
+                dailyDeterminationChange = 5;
+            }
+            else if (muscleGrowthIndex > 0 && extraCal >= -500)
+            {
+                dailyMuscleGrowth = (extraCal * .25) / 2500;
+                dailyFatGrowth = (extraCal * .75) / 1200;
                 extraCal = 0;
+                dailyDeterminationChange = Mathf.Abs(extraCal) / 100;
             }
-        }
-        else
-        {
-            dailyMuscleGrowth += ((extraCal % 500) * .20) / 3750;
-            dailyFatGrowth += ((extraCal % 500) * .80) / 3750;
-            if (extraCal >= 500)
+            else if (muscleGrowthIndex <= 0 && extraCal >= -500)
             {
-                extraCal -= 500;
-            }
-            else
-            {
+                dailyMuscleGrowth = (extraCal * .8) / 2500;
+                dailyFatGrowth = (extraCal * .2) / 1200;
                 extraCal = 0;
+                dailyDeterminationChange = Mathf.Abs(extraCal) / 100;
             }
+            dailyMuscleGrowth += (extraCal * .9) / 2500;
+            dailyFatGrowth += (extraCal * .1) / 1200;
+            dailyDeterminationChange -= Mathf.Abs(extraCal) / 100;
         }
-
-        dailyFatGrowth += extraCal / 3750;
-        dailyWeightGrowth = dailyFatGrowth + dailyMuscleGrowth;
+     
+        dailyWeightGrowth = dailyFatGrowth + dailyMuscleGrowth ;
 
         print(dailyMuscleGrowth + " " + dailyWeightGrowth + " " + dailyFatGrowth + " " + dailyDeterminationChange + " " + dailyMetabolismChange);
         player.setValues(dailyMuscleGrowth, dailyMuscleGrowth, dailyFatGrowth, dailyDeterminationChange, dailyMetabolismChange);
 
-        print(player.getWeight());
     }
 
 
