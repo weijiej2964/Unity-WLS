@@ -39,7 +39,21 @@
 
 ### Add Event
 
-* Losing determination, the chance of this happening would be the lost determination
-* It will affect diet or eating, create a 50/50 generator for both 
+```java
+//create RandomEvent Class
+public class RandomEvents(){
+  //create variables for the changes to each stat
+  double weight, bodyfat, musclemass;
+  int metabolism, determination;
+  string text; 
+  
+  //create a constructor
+  public RandomEvents(double w, double fat, double muscle, int meta, int deter, string text){
+    //set the param to variable
+  }
+  
+  
+  
+}
 
-* 
+```
