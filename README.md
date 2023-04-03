@@ -52,8 +52,10 @@ public class RandomEvents(){
     //set the param to variable
   }
   
-  
-  
+  public double getWeight(){
+    return weight; 
+  }
+  //do same for all other variable. 
 }
 
 ```
