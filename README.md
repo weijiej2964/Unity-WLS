@@ -46,16 +46,16 @@ public class RandomEvents(){
   double weight, bodyfat, musclemass;
   int metabolism, determination;
   string text; 
+  Player player = InitStat.getPlayer();
   
   //create a constructor
   public RandomEvents(double w, double fat, double muscle, int meta, int deter, string text){
     //set the param to variable
   }
   
-  public double getWeight(){
-    return weight; 
+  public void changeStat(){
+    player.setValue(weight, musclemass, bodyfat,determination, metabolism);
   }
-  //do same for all other variable. 
 }
 
 ```
