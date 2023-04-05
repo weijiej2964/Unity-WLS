@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//create RandomEvent Class
-public class RandomEvents(){
-    //create variables for the changes to each stat
-    double weight, bodyfat, musclemass;
+public class RandonEvents : MonoBehaviour
+{
+    //create RandomEvent Class
+    public class RandomEvents(){
+  //create variables for the changes to each stat
+  double weight, bodyfat, musclemass;
     int metabolism, determination;
     string text;
     Player player = InitStat.getPlayer();
@@ -20,4 +22,7 @@ public class RandomEvents(){
     {
         player.setValue(weight, musclemass, bodyfat, determination, metabolism);
     }
+    
 }
+
+
