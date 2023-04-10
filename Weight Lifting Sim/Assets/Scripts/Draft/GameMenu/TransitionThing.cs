@@ -11,6 +11,7 @@ public class TransitionThing : MonoBehaviour
     int counter;
 
     moodChanger mood;
+    List<RandomEvents> ListOfEvents = new List<RandomEvents>(); 
     Player player;
     List<Diet> diets;
     List<Exercise> exercises;
@@ -29,7 +30,11 @@ public class TransitionThing : MonoBehaviour
         diets = DietManager.Diets;
         exercises = PlanManager.Exercises;
         counter = 1;
-        dayNum.text = "Day " + counter; 
+        dayNum.text = "Day " + counter;
+
+        //events
+        RandomEvents Overwork = new RandomEvents(-1, 0, 0, 0, -5, "You are overworked today, you feel super tired");
+        ListOfEvents.Add(Overwork);
     }
 
     public void buttonClick(){
@@ -122,15 +127,14 @@ public class TransitionThing : MonoBehaviour
             dailyMuscleGrowth += (extraCal * .9) / 2500;
             dailyFatGrowth += (extraCal * .1) / 1200;
             dailyDeterminationChange -= Mathf.Abs(extraCal) / 100;
-
-
-            // change mood
-            mood.changeMood();
-          
         }
-     
+        // change mood
+        mood.changeMood();
+        int EventIndex = Random.Range(0, ListOfEvents.Count);
+        ListOfEvents[EventIndex].changeStat();
+        print(ListOfEvents[EventIndex].getText());
         dailyWeightGrowth = dailyFatGrowth + dailyMuscleGrowth ;
-
+        
         print(dailyMuscleGrowth + " " + dailyWeightGrowth + " " + dailyFatGrowth + " " + dailyDeterminationChange + " " + dailyMetabolismChange);
         player.setValues(dailyMuscleGrowth, dailyMuscleGrowth, dailyFatGrowth, dailyDeterminationChange, dailyMetabolismChange);
 
