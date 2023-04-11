@@ -9,9 +9,9 @@ public class TransitionThing : MonoBehaviour
 
     public TextMeshProUGUI dayNum;
     int counter;
-
+    public GameObject playerImage;
+    public Image playerbody;
     moodChanger mood;
-    List<RandomEvents> ListOfEvents = new List<RandomEvents>(); 
     Player player;
     List<Diet> diets;
     List<Exercise> exercises;
@@ -32,9 +32,10 @@ public class TransitionThing : MonoBehaviour
         counter = 1;
         dayNum.text = "Day " + counter;
 
-        //events
-        RandomEvents Overwork = new RandomEvents(-1, 0, 0, 0, -5, "You are overworked today, you feel super tired");
-        ListOfEvents.Add(Overwork);
+        playerbody = playerImage.GetComponent<Image>();
+        TheEvents.Normal();
+        TheEvents.getRandomEvent();
+        playerbody.sprite = player.getCurrentPlayerBody();
     }
 
     public void buttonClick(){
@@ -130,15 +131,18 @@ public class TransitionThing : MonoBehaviour
         }
         // change mood
         mood.changeMood();
-        int EventIndex = Random.Range(0, ListOfEvents.Count);
-        ListOfEvents[EventIndex].changeStat();
-        print(ListOfEvents[EventIndex].getText());
-        dailyWeightGrowth = dailyFatGrowth + dailyMuscleGrowth ;
         
+        TheEvents.getRandomEvent();
+        TheEvents.getCurrent().changeStat();
+
+        playerbody.sprite = player.getCurrentPlayerBody();
+        
+
+        dailyWeightGrowth = dailyFatGrowth + dailyMuscleGrowth ;
         print(dailyMuscleGrowth + " " + dailyWeightGrowth + " " + dailyFatGrowth + " " + dailyDeterminationChange + " " + dailyMetabolismChange);
         player.setValues(dailyMuscleGrowth, dailyMuscleGrowth, dailyFatGrowth, dailyDeterminationChange, dailyMetabolismChange);
 
     }
 
-
+   
 }

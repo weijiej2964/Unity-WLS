@@ -23,9 +23,10 @@ public class OpenJournal : MonoBehaviour
    
     public void ButtonClicked()
     {
-        Background.color = BackgroundColor; 
-        statText.text = "Name : " + player.getName() + " \nWeight: " + player.getWeight() + " \nDetermination: " + player.getDetermination() + " \nBody Fat: " + player.getBodyFat() + 
-        " \nMuscle Mass: " + player.getMuscleMass() + " \nMetabolism: " + player.getMetabolism() + " \nMood: " + mood.getMood();
+        Background.color = BackgroundColor;
+        print(player.getBodyFat());
+        statText.text = "Name : " + player.getName() + " \nWeight: " + player.getWeight() + "lbs \nDetermination: " + player.getDetermination() + " \nBody Fat: " + player.getBodyFat() + 
+        "lbs \nMuscle Mass: " + player.getMuscleMass() + "lbs \nMetabolism: " + player.getMetabolism() + "calories \nMood: " + mood.getMood() + "\n\n" + TheEvents.getCurrent().getText();
 
     }
    

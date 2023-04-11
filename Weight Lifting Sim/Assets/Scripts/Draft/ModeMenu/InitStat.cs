@@ -9,9 +9,10 @@ public class InitStat : MonoBehaviour
 
     private static moodChanger mood;
 
+    public Sprite LowfLowm, lowfMidm, lowfHighm, MidfLowm, MidfMidm, MidfHighm, HighfLowm, HighfMidm, HighfHighm;
     public void NormalMode()
     {
-        player = new Player(Random.Range(100f, 300f), Random.Range(.33f, .39f), Random.Range(.8f, .19f), Random.Range(50, 100), Random.Range(1200, 1800));
+        player = new Player(Random.Range(100f, 300f), Random.Range(.33f, .39f), Random.Range(.8f, .19f), Random.Range(50, 100), Random.Range(1200, 1800), LowfLowm, lowfMidm, lowfHighm, MidfLowm, MidfMidm, MidfHighm, HighfLowm, HighfMidm, HighfHighm);
         SceneManager.LoadScene("GamePlay");
         mood = new moodChanger();
     }
