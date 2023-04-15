@@ -7,13 +7,13 @@ public class Player
 {
     public string name;
 
-    public double weight, muscleMass, bodyFat;
+    public double weight, muscleMass, bodyFat, metabolism;
         
-    public int metabolism , determination;
+    public int  determination;
 
     public Sprite ll, lm, lh, ml, mm, mh, hl, hm, hh;
 
-    public Player(double w, double mass, double b, int d, int m, Sprite ll, Sprite lm, Sprite lh, Sprite ml, Sprite mm, Sprite mh, Sprite hl, Sprite hm, Sprite hh)
+    public Player(double w, double mass, double b, int d, double m, Sprite ll, Sprite lm, Sprite lh, Sprite ml, Sprite mm, Sprite mh, Sprite hl, Sprite hm, Sprite hh)
     {
         name = "Bob";
         weight = w;
@@ -34,13 +34,16 @@ public class Player
 
     }
 
-    public void setValues(double w, double mass, double b, int d, int m)
+    public void setValues(double w, double mass, double b, int d, double m)
     {
-        weight += w + b*10;
+        weight += w;
         muscleMass += mass;
         bodyFat += b;
         determination += d;
         metabolism += m;
+
+        Debug.Log(m);
+        Debug.Log(metabolism);
     }
     
     public Sprite getCurrentPlayerBody()
@@ -102,7 +105,7 @@ public class Player
         return name;
     }
 
-    public int getMetabolism()
+    public double getMetabolism()
     {
         return metabolism;
     }

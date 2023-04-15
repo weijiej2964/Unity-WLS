@@ -18,10 +18,10 @@ public class TheEvents
     {
         // Random
         RandomEvents.Add(new RandomEvents(0, 0, 0, -5, 0, "You watch too much sad videos, lose motivation"));
-        RandomEvents.Add(new RandomEvents(Random.Range(-5,5), Random.Range(-1, 1),Random.Range(-0.2f, 0.2f), 0, 0, "Your friend came to visit, you skip your routine today"));
+        //RandomEvents.Add(new RandomEvents(Random.Range(-5,5), Random.Range(-1, 1),Random.Range(-0.2f, 0.2f), 0, 0, "Your friend came to visit, you skip your routine today"));
 
         //Determination based
-        DeterminationBasedEvents.Add(new RandomEvents(4, 1, 0, 0, 0, "You Lost control and stuffed yourself with junk"));
+        DeterminationBasedEvents.Add(new RandomEvents(2, 2, 0, 0, 0, "You Lost control and stuffed yourself with junk"));
         DeterminationBasedEvents.Add(new RandomEvents(0, 0, 0, -5, 0, "You reflect on your progress so far, felt disappionted "));
     }
 

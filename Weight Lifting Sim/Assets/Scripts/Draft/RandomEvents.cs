@@ -11,7 +11,7 @@ public class RandomEvents
     Player player = InitStat.getPlayer();
 
     //create a constructor
-    public RandomEvents(double w, double fat, double muscle, int meta, int deter, string text)
+    public RandomEvents(double w, double fat, double muscle, int deter, int meta, string text)
     {
         weight = w;
         bodyfat = fat;

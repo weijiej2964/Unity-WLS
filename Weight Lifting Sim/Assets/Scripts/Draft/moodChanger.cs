@@ -13,7 +13,7 @@ public class moodChanger
     
 
 
-    public string[] moodTypes = {"excited", "fatigued", "determined", "lazy"};
+    public string[] moodTypes = {"excited", "fatigued", "determined" ,"lazy"};
 
     public moodChanger() {
         int num = Random.Range(0, 3);
