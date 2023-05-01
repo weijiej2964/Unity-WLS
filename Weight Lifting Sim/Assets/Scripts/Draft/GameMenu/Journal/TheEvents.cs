@@ -20,7 +20,7 @@ public class TheEvents
         RandomEvents.Add(new RandomEvents(0, 0, 0, -5, 0, "You watch too much sad videos, lose motivation"));
         RandomEvents.Add(new RandomEvents(0, 0, 0, 5, 0, "You watch a lot of anime, increase motivation"));
         RandomEvents.Add(new RandomEvents(0, -5, 10, 0, 0, " You want to work out over time, increase muslces and lose fat"));
-        RandomEvents.Add(new RandomEvents(5, 5, 0, 0, 0, "When to a food festival and at a lot, increase fat"));
+        RandomEvents.Add(new RandomEvents(5, 5, 0, 0, 0, "When to a food festival and ate a lot, increase fat"));
         RandomEvents.Add(new RandomEvents(-2,-10, 0, 0, 0," Doing only cardio workout, you lose fat and weight"));
         RandomEvents.Add(new RandomEvents(10, 5, 0, 0, 0, "went to a eating competition and 65 hot dogs, you gain a lot of fat));
                                           
