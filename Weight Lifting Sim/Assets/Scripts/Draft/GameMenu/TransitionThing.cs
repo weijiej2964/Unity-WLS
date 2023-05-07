@@ -30,7 +30,7 @@ public class TransitionThing : MonoBehaviour
         diets = DietManager.Diets;
         exercises = PlanManager.Exercises;
         counter = 1;
-        dayNum.text = "Day " + counter;
+        dayNum.text = "Week " + counter;
 
         playerbody = playerImage.GetComponent<Image>();
         TheEvents.Normal();
@@ -55,6 +55,11 @@ public class TransitionThing : MonoBehaviour
         {
             extraCal -= e.CaloriesBurned;
             muscleGrowthIndex += e.MuscleMassIncrease;
+
+            if(e.id == 2)
+            {
+                dailyDeterminationChange -= 2; 
+            }
         }
 
         extraCal -= (int)(player.getMetabolism());
@@ -69,28 +74,28 @@ public class TransitionThing : MonoBehaviour
                 dailyMuscleGrowth = (500 * .75) / 250;
                 dailyFatGrowth = (500 * .25) / 120;
                 extraCal -= 500;
-                dailyDeterminationChange = 2;
+                dailyDeterminationChange += 2;
             }
             else if(muscleGrowthIndex <= 0 && extraCal > 500)
             {
                 dailyMuscleGrowth = (500 * .2) / 250;
                 dailyFatGrowth = (500 * .8) / 120;
                 extraCal -= 500;
-                dailyDeterminationChange = 2;
+                dailyDeterminationChange += 2;
             }
             else if(muscleGrowthIndex > 0 && extraCal <= 500)
             {
                 dailyMuscleGrowth = (extraCal * .75) / 250;
                 dailyFatGrowth = (extraCal * .25) / 120;
                 extraCal = 0;
-                dailyDeterminationChange = extraCal/200;
+                dailyDeterminationChange += extraCal/200;
             }
             else if(muscleGrowthIndex < 0 && extraCal <= 500)
             {
                 dailyMuscleGrowth = (extraCal * .2) / 250;
                 dailyFatGrowth = (extraCal * .8) / 120;
                 extraCal = 0;
-                dailyDeterminationChange = extraCal/200;
+                dailyDeterminationChange += extraCal/200;
             }
             dailyMuscleGrowth += (extraCal * .1) / 200;
             dailyFatGrowth += (extraCal * .9) / 120;
@@ -102,28 +107,28 @@ public class TransitionThing : MonoBehaviour
                 dailyMuscleGrowth = (-500 * .25) / 250;
                 dailyFatGrowth = (-500 * .75) / 120;
                 extraCal += 500;
-                dailyDeterminationChange = 2;
+                dailyDeterminationChange += 2;
             }
             else if (muscleGrowthIndex <= 0 && extraCal < -500)
             {
                 dailyMuscleGrowth = (-500 * .8) / 250;
                 dailyFatGrowth = (-500 * .2) / 120;
                 extraCal += 500;
-                dailyDeterminationChange = 2;
+                dailyDeterminationChange += 2;
             }
             else if (muscleGrowthIndex > 0 && extraCal >= -500)
             {
                 dailyMuscleGrowth = (extraCal * .25) / 250;
                 dailyFatGrowth = (extraCal * .75) / 120;
                 extraCal = 0;
-                dailyDeterminationChange = Mathf.Abs(extraCal) / 200;
+                dailyDeterminationChange += Mathf.Abs(extraCal) / 200;
             }
             else if (muscleGrowthIndex <= 0 && extraCal >= -500)
             {
                 dailyMuscleGrowth = (extraCal * .8) / 250;
                 dailyFatGrowth = (extraCal * .2) / 120;
                 extraCal = 0;
-                dailyDeterminationChange = Mathf.Abs(extraCal) / 200;
+                dailyDeterminationChange += Mathf.Abs(extraCal) / 200;
             }
             dailyMuscleGrowth += (extraCal * .9) / 250;
             dailyFatGrowth += (extraCal * .1) / 120;
