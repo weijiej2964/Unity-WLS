@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RandomMood : MonoBehaviour
+{
+    double weight, bodyfat, musclemass;
+    int metabolism, determination;
+    string text;
+    Player player = InitStat.getPlayer();
+
+    //create a constructor
+    public RandomMood(double w, double fat, double muscle, int deter, int meta, string text)
+    {
+        weight = w;
+        bodyfat = fat;
+        musclemass = muscle;
+        metabolism = meta;
+        determination = deter;
+        this.text = text; 
+    }
+
+    public void changeStat()
+    {
+        player.setValues(weight, musclemass, bodyfat, determination, metabolism);
+    }
+    
+    public string getText()
+    {
+        return text;
+    }
+}

@@ -11,7 +11,7 @@ public class TransitionThing : MonoBehaviour
     int counter;
     public GameObject playerImage;
     public Image playerbody;
-    moodChanger mood;
+    
     Player player;
     List<Diet> diets;
     List<Exercise> exercises;
@@ -28,13 +28,15 @@ public class TransitionThing : MonoBehaviour
     private void Start()
     {
         player = InitStat.getPlayer();
-        mood = InitStat.getMood();
+        
         diets = DietManager.Diets;
         exercises = PlanManager.Exercises;
         counter = 1;
         dayNum.text = "Week " + counter;
 
         playerbody = playerImage.GetComponent<Image>();
+        TheMoods.Normal();
+        TheMoods.getRandomMood();
         TheEvents.Normal();
         TheEvents.getRandomEvent();
         playerbody.sprite = player.getCurrentPlayerBody();
@@ -137,7 +139,8 @@ public class TransitionThing : MonoBehaviour
             dailyDeterminationChange -= Mathf.Abs(extraCal) / 200;
         }
         // change mood
-        //mood.changeMood();
+        TheMoods.getRandomMood();
+        TheMoods.getCurrent().changeStat();
         
         TheEvents.getRandomEvent();
         TheEvents.getCurrent().changeStat();
