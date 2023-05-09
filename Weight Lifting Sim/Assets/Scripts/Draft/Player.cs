@@ -42,8 +42,10 @@ public class Player
         determination += d;
         metabolism += m;
 
-        Debug.Log(m);
-        Debug.Log(metabolism);
+        if(determination > 100)
+        {
+            determination = 100; 
+        }
     }
     
     public Sprite getCurrentPlayerBody()

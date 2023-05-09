@@ -25,8 +25,8 @@ public class OpenJournal : MonoBehaviour
     {
         Background.color = BackgroundColor;
         print(player.getBodyFat());
-        statText.text = "Name : " + player.getName() + " \nWeight: " + (int)player.getWeight() + "lbs \nDetermination: " + player.getDetermination() + " \nBody Fat: " + (int)player.getBodyFat() + 
-        "lbs \nMuscle Mass: " + (int)player.getMuscleMass() + "lbs \nMetabolism: " + player.getMetabolism() + "calories \nMood: " + mood.getMood() + "\n\n" + TheEvents.getCurrent().getText();
+        statText.text = "Name : " + player.getName() + " \nWeight: " + (int)player.getWeight() + "Lbs \nDetermination: " + player.getDetermination() + " \nBody Fat: " + (int)player.getBodyFat() + 
+        "Lbs \nMuscle Mass: " + (int)player.getMuscleMass() + "Lbs \nMetabolism: " + (int)player.getMetabolism() + "Cal \nMood: " + mood.getMood() + "\n\n" + TheEvents.getCurrent().getText();
 
     }
    

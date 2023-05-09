@@ -23,6 +23,8 @@ public class TransitionThing : MonoBehaviour
     double dailyFatGrowth;
     double dailyMetabolismChange;
     int dailyDeterminationChange;
+
+    public GameObject GameOverPanel; 
     private void Start()
     {
         player = InitStat.getPlayer();
@@ -138,7 +140,7 @@ public class TransitionThing : MonoBehaviour
         //mood.changeMood();
         
         TheEvents.getRandomEvent();
-        //TheEvents.getCurrent().changeStat();
+        TheEvents.getCurrent().changeStat();
 
         playerbody.sprite = player.getCurrentPlayerBody();
         dailyMetabolismChange = (dailyMuscleGrowth * 10);
@@ -147,6 +149,12 @@ public class TransitionThing : MonoBehaviour
         print(dailyMuscleGrowth + " " + dailyWeightGrowth + " " + dailyFatGrowth + " " + dailyDeterminationChange + " " + dailyMetabolismChange);
         player.setValues(dailyMuscleGrowth, dailyMuscleGrowth, dailyFatGrowth, dailyDeterminationChange, dailyMetabolismChange);
 
+      
+
+        if(player.getDetermination() < 0)
+        {
+            GameOverPanel.SetActive(true);
+        }
     }
 
    
